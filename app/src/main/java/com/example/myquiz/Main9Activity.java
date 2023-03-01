@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class Main9Activity extends AppCompatActivity {
 Button button1,reset;
@@ -16,9 +17,9 @@ RadioButton radioButton1,radioButton2,radioButton3,radioButton4;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main9 );
-    button1=findViewById( R.id.submitq1 );
-    reset=findViewById( R.id.reset );
-    radioButton1=findViewById( R.id.radioButton1 );
+        button1=findViewById( R.id.submitq1 );
+        reset=findViewById( R.id.reset );
+        radioButton1=findViewById( R.id.radioButton1 );
         radioButton2=findViewById( R.id.radioButton2 );
         radioButton3=findViewById( R.id.radioButton3 );
         radioButton4=findViewById( R.id.radioButton4 );
@@ -26,8 +27,17 @@ RadioButton radioButton1,radioButton2,radioButton3,radioButton4;
     button1.setOnClickListener( new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent( Main9Activity.this,Main10Activity.class );
-            startActivity( intent );
+
+            if (radioButton1.isChecked()||radioButton2.isChecked()||radioButton3.isChecked()||radioButton4.isChecked()) {
+
+                Intent intent = new Intent( Main9Activity.this, Main10Activity.class );
+                startActivity( intent );
+
+            }
+            else
+                Toast.makeText( Main9Activity.this, "Please answer to continue ", Toast.LENGTH_SHORT ).show();
+            return;
+
         }
     } );
 

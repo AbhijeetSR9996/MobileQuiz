@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 public class Main16Activity extends AppCompatActivity {
 Button button1,reset;
@@ -24,11 +25,21 @@ Button button1,reset;
         radioButton4=findViewById( R.id.radioButton4 );
 
 
+
         button1.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( Main16Activity.this,Main17Activity.class );
-                startActivity( intent );
+
+                if (radioButton1.isChecked()||radioButton2.isChecked()||radioButton3.isChecked()||radioButton4.isChecked()) {
+
+                    Intent intent = new Intent( Main16Activity.this, Main17Activity.class );
+                    startActivity( intent );
+
+                }
+                else
+                    Toast.makeText( Main16Activity.this, "Please answer to continue ", Toast.LENGTH_SHORT ).show();
+                return;
+
             }
         } );
         reset.setOnClickListener( new View.OnClickListener() {

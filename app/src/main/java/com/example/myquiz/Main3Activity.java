@@ -68,7 +68,7 @@ public class Main3Activity extends AppCompatActivity {
                     return;
                 }
 
-                Intent login_intent = new Intent(getApplicationContext(),Main5Activity .class);
+                Intent login_intent = new Intent(getApplicationContext(),Main5Activity.class);
                 startActivity(login_intent);
 
 

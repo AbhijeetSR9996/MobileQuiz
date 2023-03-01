@@ -48,8 +48,8 @@
         android:layout_height="62dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="146dp"
-        android:layout_marginBottom="37dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginBottom="44dp"
         android:text=" register " />
 
     <Button
@@ -70,10 +70,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="106dp"
-        android:layout_marginBottom="511dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="507dp"
         android:text="User Login"
-        android:textStyle="bold"
-        android:textSize="30dp" />
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

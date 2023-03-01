@@ -2,22 +2,25 @@ package com.example.myquiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
-public class Main13Activity extends AppCompatActivity {
+public class MainActivity13 extends AppCompatActivity {
     Button button1,reset;
     RadioButton radioButton1,radioButton2,radioButton3,radioButton4;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main13 );
-        button1=findViewById( R.id.submitq5 );
+        button1=findViewById(R.id.q5);
         reset=findViewById( R.id.reset );
         radioButton1=findViewById( R.id.radioButton1 );
         radioButton2=findViewById( R.id.radioButton2 );
@@ -28,10 +31,20 @@ public class Main13Activity extends AppCompatActivity {
         button1.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( Main13Activity.this,Main14Activity.class );
-                startActivity( intent );
+
+                if (radioButton1.isChecked()||radioButton2.isChecked()||radioButton3.isChecked()||radioButton4.isChecked()) {
+
+                    Intent intent = new Intent( MainActivity13.this, Main29Activity.class );
+                    startActivity( intent );
+
+                }
+                else
+                    Toast.makeText( MainActivity13.this, "Please answer to continue ", Toast.LENGTH_SHORT ).show();
+                return;
+
             }
         } );
+
         reset.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {

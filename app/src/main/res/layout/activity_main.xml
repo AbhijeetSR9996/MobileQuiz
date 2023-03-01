@@ -9,12 +9,12 @@
 
     <Button
         android:id="@+id/admin"
-        android:layout_width="151dp"
+        android:layout_width="153dp"
         android:layout_height="65dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="129dp"
-        android:layout_marginTop="409dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="507dp"
         android:text="Admin Login" />
 
     <Button
@@ -23,8 +23,8 @@
         android:layout_height="65dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="520dp"
-        android:layout_marginEnd="95dp"
+        android:layout_marginTop="507dp"
+        android:layout_marginEnd="35dp"
         android:text="User Login" />
 
     <TextView
@@ -33,11 +33,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="106dp"
-        android:layout_marginBottom="511dp"
-        android:text="Accounts Login"
-        android:textStyle="bold"
-        android:textSize="30dp" />
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="510dp"
+        android:text="Login Accounts "
+        android:textSize="30dp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
 

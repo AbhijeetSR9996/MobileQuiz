@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-
 public class Main29Activity extends AppCompatActivity {
     TextView tv, tv2, tv3;
     Button btnRestart,btnquit;
@@ -27,11 +26,14 @@ public class Main29Activity extends AppCompatActivity {
         btnquit = findViewById( R.id.btnquit );
 
         StringBuffer sb = new StringBuffer();
-        sb.append("Correct answers: " + Main28Activity.correct + "\n");
+//        sb.append("Correct answers: " + Main28Activity.correct + "\n");
+        sb.append("Correct answers: " + 4 + "\n");
         StringBuffer sb2 = new StringBuffer();
-        sb2.append("Wrong Answers: " + Main28Activity.wrong + "\n");
+//        sb2.append("Wrong Answers: " + Main28Activity.wrong + "\n");
+        sb2.append("Wrong Answers: " + 1 + "\n");
         StringBuffer sb3 = new StringBuffer();
-        sb3.append("Final Score: " + Main28Activity.correct + "\n");
+//        sb3.append("Final Score: " + Main28Activity.correct + "\n");
+        sb3.append("Final Score: " + 4/5 + "\n");
         tv.setText(sb);
         tv2.setText(sb2);
         tv3.setText(sb3);
